@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QD Axiom - Privacy-First Insurance & Data Ecosystem</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-primary {
+            background-color: #1A1A1A;
+        }
+        .bg-secondary {
+            background-color: #D35400;
+        }
+        .bg-tertiary {
+            background-color: #F8F9FA;
+        }
+        .text-primary {
+            color: #D35400;
+        }
+        .border-primary {
+            border-color: #D35400;
+        }
+        .btn-primary {
+            background-color: #D35400;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #B33D00;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #D35400;
+            border: 2px solid #D35400;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #D35400;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .section {
+            padding: 5rem 0;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background-color: #D35400;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            bottom: 0;
+            width: 2px;
+            background-color: #D35400;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-primary text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <span class="text-primary mr-1">QD</span> AXIOM
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#vision" class="hover:text-primary transition duration-300">Vision</a>
+                <a href="#mission" class="hover:text-primary transition duration-300">Mission</a>
+                <a href="#roadmap" class="hover:text-primary transition duration-300">Roadmap</a>
+                <a href="#team" class="hover:text-primary transition duration-300">Team</a>
+                <a href="#faq" class="hover:text-primary transition duration-300">FAQ</a>
+            </div>
+            <div class="flex space-x-3">
+                <a href="#contact" class="btn-secondary px-4 py-2 rounded-full font-medium">Contact Us</a>
+                <a href="#invest" class="btn-primary px-4 py-2 rounded-full font-medium flex items-center">
+                    <i class="fas fa-user-plus mr-2"></i> Join Now
+                </a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">Early Support & Fundraising Overview</h1>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">Join us in building a privacy-first tech ecosystem that restores control to individuals while providing accessible insurance solutions for everyone.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#invest" class="btn-primary px-8 py-3 rounded-full font-medium text-lg flex items-center">
+                    <i class="fas fa-hand-holding-usd mr-2"></i> Support Our Mission
+                </a>
+                <a href="#learn" class="btn-secondary px-8 py-3 rounded-full font-medium text-lg flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">A Three-Phase Vision</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">QD Axiom is not just an insurance solution - it's a gateway into a broader privacy-first technology ecosystem.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="card bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary bg-opacity-10 text-primary mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Phase 1: Insurance Access</h3>
+                    <p class="text-gray-600">Our initial focus is democratizing access to insurance through data-driven technology. Using privacy-preserving wearable integration, we'll provide free or affordable insurance options to those traditionally underserved.</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Privacy-first data collection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>AI-powered risk assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Affordable coverage options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Support for underserved communities</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-lg p-8 border-t-4 border-gray-300">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-gray-500 mx-auto mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Phase 2: Income Generation</h3>
+                    <p class="text-gray-600">Building on our foundation, we'll introduce tools for income generation and data custody, enabling users to monetize their own data on their terms while maintaining complete privacy.</p>
+                    <div class="mt-6 py-3 px-4 bg-gray-100 rounded-lg text-center">
+                        <p class="text-sm text-gray-500 italic">Full details available to verified partners and investors to protect our IP.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-lg p-8 border-t-4 border-gray-300">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-gray-500 mx-auto mb-6">
+                        <i class="fas fa-network-wired text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Phase 3: Anonymous Infrastructure</h3>
+                    <p class="text-gray-600">Our ultimate vision includes building anonymous infrastructure that transforms how personal data is handled across industries, putting users firmly in control.</p>
+                    <div class="mt-6 py-3 px-4 bg-gray-100 rounded-lg text-center">
+                        <p class="text-sm text-gray-500 italic">Full details available to verified partners and investors to protect our IP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2">
+                <div class="p-12 md:p-20 bg-black">
+                    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-3xl font-light mb-8">Everyone deserves Insurance and support. You are not alone.</p>
+                    <p class="mb-6">QD Axiom is a three phase company with a mission to provide guaranteed access to insurance through data, while building a privacy-first tech ecosystem that restores control to individuals.</p>
+                    <p class="mb-8">We believe in a world where your data can help you live healthier, earn more, and stay protected - without compromising your privacy.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-1 bg-primary mr-4"></div>
+                        <p class="text-primary font-medium">Privacy-First Technology</p>
+                    </div>
+                </div>
+                <div class="p-12 md:p-20 bg-secondary">
+                    <h3 class="text-2xl font-bold mb-6">Who We Serve</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-store text-white text-opacity-80 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Small Businesses</h4>
+                                <p class="text-white text-opacity-80">Affordable insurance options tailored to small business needs</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-bicycle text-white text-opacity-80 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Gig Workers</h4>
+                                <p class="text-white text-opacity-80">Flexible coverage that adapts to variable income streams</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user text-white text-opacity-80 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Unemployed Individuals</h4>
+                                <p class="text-white text-opacity-80">Access to essential coverage during transitional periods</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mt-10 p-6 bg-white bg-opacity-10 rounded-lg">
+                        <p class="text-lg font-bold mb-2">No discrimination based on income</p>
+                        <p>We understand that income doesn't always mean you have funds available. Our system focuses on accessibility for all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-Time Data Section -->
+    <section class="section bg-tertiary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Real-Time Information</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">How our privacy-first data ecosystem works to protect and empower you</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Harnessing Data While Preserving Privacy</h3>
+                    <p class="mb-6 text-gray-600">Our proprietary technology allows for real-time health and lifestyle data analysis without compromising your personal information. This data-driven approach enables us to:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mt-1 mr-3">
+                                <i class="fas fa-chart-bar text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Provide Accurate Risk Assessment</h4>
+                                <p class="text-gray-600">Using anonymized aggregate data to evaluate risk factors without exposing personal details</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mt-1 mr-3">
+                                <i class="fas fa-shield-alt text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Offer Personalized Coverage</h4>
+                                <p class="text-gray-600">Tailoring insurance options to your specific needs based on analyzed patterns</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mt-1 mr-3">
+                                <i class="fas fa-sync text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Adjust in Real-Time</h4>
+                                <p class="text-gray-600">Continuously adapting coverage as your circumstances change</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mt-1 mr-3">
+                                <i class="fas fa-lock text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Maintain Full Data Control</h4>
+                                <p class="text-gray-600">You always own your data and can revoke access at any time</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-8 text-center">
+                        <h4 class="text-xl font-bold mb-2">How Your Data Stays Protected</h4>
+                        <p class="text-gray-600">Our privacy-first approach ensures your information remains secure</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center p-4 border border-gray-200 rounded-lg">
+                            <div class="h-10 w-10 rounded-full bg-primary bg-opacity-10 text-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">End-to-End Encryption</h5>
+                                <p class="text-sm text-gray-600">All data is encrypted during transmission and storage</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border border-gray-200 rounded-lg">
+                            <div class="h-10 w-10 rounded-full bg-primary bg-opacity-10 text-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Anonymized Processing</h5>
+                                <p class="text-sm text-gray-600">Analysis occurs on anonymized data points only</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border border-gray-200 rounded-lg">
+                            <div class="h-10 w-10 rounded-full bg-primary bg-opacity-10 text-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Decentralized Storage</h5>
+                                <p class="text-sm text-gray-600">Your information isn't held in centralized databases</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border border-gray-200 rounded-lg">
+                            <div class="h-10 w-10 rounded-full bg-primary bg-opacity-10 text-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Granular Control</h5>
+                                <p class="text-sm text-gray-600">Choose exactly what data you share and when</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundraising Section -->
+    <section id="invest" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why We're Raising Funds</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">This early fundraising effort is for people who believe in the mission and want to be part of it.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-primary text-white p-10 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-bold mb-6">Initial Seed Round</h3>
+                    <div class="flex items-center mb-8">
+                        <div class="text-5xl font-bold mr-4">$1M-$2.5M</div>
+                        <div class="text-white text-opacity-80">Target fundraising amount</div>
+                    </div>
+                    <div class="mb-8">
+                        <div class="h-4 w-full bg-white bg-opacity-20 rounded-full">
+                            <div class="h-4 bg-white rounded-full" style="width: 35%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-sm">
+                            <span>$350,000 Raised</span>
+                            <span>$1,000,000 Goal</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full py-3 bg-white text-primary text-center font-bold rounded-lg hover:bg-gray-100 transition duration-300 text-lg">
+                        Become an Early Supporter
+                    </a>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">These funds will cover:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Platform Development</h4>
+                                <p class="text-gray-600">Building our secure, privacy-focused technology infrastructure</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Legal and Regulatory Compliance</h4>
+                                <p class="text-gray-600">Ensuring we meet all industry standards and regulations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Insurance Contracting and Admin</h4>
+                                <p class="text-gray-600">Establishing partnerships with insurance providers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-watch"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Wearable and Data Integration</h4>
+                                <p class="text-gray-600">Developing secure connections with health monitoring devices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">User Acquisition and Support</h4>
+                                <p class="text-gray-600">Growing our community and providing exceptional support</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 border-l-4 border-primary bg-white shadow-md rounded-r-lg">
+                            <div class="mr-4 text-primary text-xl">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Beta Testing for 5,000 Users</h4>
+                                <p class="text-gray-600">Validating our solution with real-world users</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12-Month Roadmap -->
+    <section id="roadmap" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">12-Month Roadmap</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our strategic plan for bringing QD Axiom to life</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform -translate-x-1/2"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative mb-24">
+                    <div class="timeline-dot mx-auto mb-4"></div>
+                    <div class="md:w-5/12 md:ml-auto md:-mr-12 bg-white p-6 rounded-lg shadow-lg relative">
+                        <span class="absolute top-6 left-0 transform -translate-x-full bg-primary text-white px-4 py-1 rounded-full font-bold md:block hidden">Q1</span>
+                        <h3 class="text-xl font-bold mb-2">Waitlist & Community Building</h3>
+                        <p class="text-gray-600 mb-4">Building our initial community of supporters and early adopters.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Launch community platform</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Begin waitlist signups</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-spinner text-blue-500 mt-1 mr-2 fa-pulse"></i>
+                                <span>Host virtual community events</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex">
+                            <div class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm">In Progress</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative mb-24">
+                    <div class="timeline-dot mx-auto mb-4"></div>
+                    <div class="md:w-5/12 md:mr-auto md:-ml-12 bg-white p-6 rounded-lg shadow-lg relative">
+                        <span class="absolute top-6 right-0 transform translate-x-full bg-primary text-white px-4 py-1 rounded-full font-bold md:block hidden">Q2</span>
+                        <h3 class="text-xl font-bold mb-2">Crowdfunding + App Prototype Development</h3>
+                        <p class="text-gray-600 mb-4">Securing initial funding while developing our application prototype.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Launch crowdfunding campaign</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Develop initial app prototype</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Begin insurance partner negotiations</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex">
+                            <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative mb-24">
+                    <div class="timeline-dot mx-auto mb-4"></div>
+                    <div class="md:w-5/12 md:ml-auto md:-mr-12 bg-white p-6 rounded-lg shadow-lg relative">
+                        <span class="absolute top-6 left-0 transform -translate-x-full bg-primary text-white px-4 py-1 rounded-full font-bold md:block hidden">Q3</span>
+                        <h3 class="text-xl font-bold mb-2">First 15K Users with Free Insurance Access</h3>
+                        <p class="text-gray-600 mb-4">Onboarding our first 15,000 users who will receive free insurance access.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Launch beta version of platform</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Begin onboarding first 15,000 users</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Deploy free insurance coverage</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex">
+                            <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm">Future Phase</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="timeline-dot mx-auto mb-4"></div>
+                    <div class="md:w-5/12 md:mr-auto md:-ml-12 bg-white p-6 rounded-lg shadow-lg relative">
+                        <span class="absolute top-6 right-0 transform translate-x-full bg-primary text-white px-4 py-1 rounded-full font-bold md:block hidden">Q4</span>
+                        <h3 class="text-xl font-bold mb-2">Investor Seed Round + Platform Rollout</h3>
+                        <p class="text-gray-600 mb-4">Securing additional investment to fully roll out our platform.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Secure institutional investment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Full platform launch</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+                                <span>Expand insurance offerings</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex">
+                            <div class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm">Future Phase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Meet the visionaries building the future of privacy-first insurance</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Founder & CEO</h3>
+                        <p class="text-gray-600 mb-4">15+ years in insurtech and data privacy</p>
+                        <p class="text-gray-600 text-sm">Passionate about democratizing access to insurance and empowering individuals through data ownership.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">CTO</h3>
+                        <p class="text-gray-600 mb-4">Former tech lead at major health data company</p>
+                        <p class="text-gray-600 text-sm">Expert in building secure, privacy-preserving systems that handle sensitive health and financial data.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Head of Insurance Relations</h3>
+                        <p class="text-gray-600 mb-4">20+ years in insurance industry</p>
+                        <p class="text-gray-600 text-sm">Specialized in creating innovative insurance products for underserved markets and communities.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">We're building a team of passionate professionals who believe in our mission</p>
+                <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                    View Open Positions <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold mb-2">Trusted By</h2>
+                <p class="text-gray-600">Companies that support our mission</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="flex justify-center">
+                    <div class="h-20 w-20 bg-white rounded-full shadow-sm p-4 flex items-center justify-center">
+                        <span class="text-gray-800 font-bold">GENERAL TRANSPORT</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-20 w-20 bg-white rounded-full shadow-sm p-4 flex items-center justify-center">
+                        <span class="text-gray-800 font-bold">IDI SOFTWARE</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-20 w-20 bg-white rounded-full shadow-sm p-4 flex items-center justify-center">
+                        <span class="text-gray-800 font-bold">IMOGEN CARS</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-20 w-20 bg-white rounded-full shadow-sm p-4 flex items-center justify-center">
+                        <span class="text-gray-800 font-bold">TRI-NEX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Common questions about QD Axiom and our approach</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="accordion-item">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg py-4 px-6 hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion(this)">
+                        <span>How does QD Axiom provide free insurance?</span>
+                        <i class="fas fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">QD Axiom leverages anonymized data insights and partnerships with insurance providers to negotiate better rates. Through our innovative risk assessment model, we can offer free basic coverage to qualifying users while maintaining sustainable operations through premium tier options and data analytics services.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg py-4 px-6 hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion(this)">
+                        <span>What types of insurance will be offered?</span>
+                        <i class="fas fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">Our initial launch will focus on essential health coverage and income protection insurance specifically designed for gig workers, small business owners, and individuals with variable income. As we grow, we plan to expand into additional insurance categories based on community needs and feedback.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg py-4 px-6 hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion(this)">
+                        <span>How is my data kept private and secure?</span>
+                        <i class="fas fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">We employ end-to-end encryption, anonymization protocols, and decentralized storage to ensure your data remains private. Our system is designed so that only the minimum necessary information is used for insurance qualification, and you maintain complete control over what data is shared and when.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg py-4 px-6 hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion(this)">
+                        <span>Who qualifies for the free insurance program?</span>
+                        <i class="fas fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">Our initial free insurance program will prioritize individuals without current coverage, particularly gig workers, small business owners, and those experiencing unemployment. Qualification is not based on income level but on need and participation in our data ecosystem. The first 15,000 users will receive priority access to our free coverage options.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg py-4 px-6 hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion(this)">
+                        <span>How can I invest in QD Axiom?</span>
+                        <i class="fas fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">We're currently accepting early supporters for our initial seed round of $1M to $2.5M. You can contribute through our secure investment portal, which offers various levels of participation from small contributions to larger investment opportunities. All early supporters receive special benefits and regular updates on our progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Census Section -->
+    <section class="section bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Help Us Understand Our Community</h2>
+                    <p class="mb-6">We're asking all supporters to complete a quick census so we can better plan how QDX can serve you and your household.</p>
+                    <p class="mb-8">Your information stays private and secure. This is not for marketing — it's for building real solutions that serve real people.</p>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold mb-4">This helps us:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mr-3 mt-1"></i>
+                                <span>Understand family sizes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mr-3 mt-1"></i>
+                                <span>Estimate potential insurance needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mr-3 mt-1"></i>
+                                <span>Advocate for what real households actually look like</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="italic">Thanks for being part of this movement. Every response helps shape the future of QDX.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Community Census</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="adults">How many adults (18 and over) live in your household?</label>
+                            <select id="adults" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary focus:ring-opacity-50 focus:border-primary">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="children">How many children or teens (under 18)?</label>
+                            <select id="children" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary focus:ring-opacity-50 focus:border-primary">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="employment">Current employment status:</label>
+                            <select id="employment" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary focus:ring-opacity-50 focus:border-primary">
+                                <option value="employed">Full-time employed</option>
+                                <option value="part-time">Part-time employed</option>
+                                <option value="self-employed">Self-employed</option>
+                                <option value="gig-worker">Gig worker</option>
+                                <option value="unemployed">Currently unemployed</option>
+                                <option value="retired">Retired</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="insurance">Do you currently have insurance coverage?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="insurance" value="yes" class="mr-2 text-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                                    <span>Yes</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="insurance" value="no" class="mr-2 text-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                                    <span>No</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="insurance" value="partial" class="mr-2 text-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                                    <span>Partial</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition duration-300">
+                            Submit Census
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4 text-center">Your privacy is our priority. All information is anonymized and securely stored.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Promise -->
+    <section class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Transparency Promise</h2>
+                <p class="text-xl mb-8">We're committed to full transparency. Every dollar raised will be accounted for, and every milestone shared. You deserve to know how your support powers our mission and fuels our growth.</p>
+                <div class="h-1 w-32 bg-primary mx-auto mb-8"></div>
+                <p class="text-2xl font-light italic mb-8">We're building this with you, not just for you. Your early support has a greater impact than you might imagine.</p>
+                <a href="#invest" class="btn-primary px-10 py-4 rounded-full font-medium text-lg inline-block">
+                    Support QDX Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Be Part of the Future of Data-Driven Insurance</h2>
+            <p class="text-xl mb-12 max-w-3xl mx-auto">We're building QDX to reshape how people access insurance using privacy-first, AI powered, real-time data to unlock free or affordable coverage for everyone.</p>
+            <p class="mb-12 max-w-3xl mx-auto">Every sign-up, share, and contribution brings us one step closer to a future where your data works for you and not the other way around.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#invest" class="btn-primary px-8 py-3 rounded-full font-medium text-lg">
+                    Become an Early Supporter
+                </a>
+                <a href="#contact" class="btn-secondary px-8 py-3 rounded-full font-medium text-lg">
+                    Join Our Waitlist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QD Axiom</h3>
+                    <p class="text-gray-400 mb-4">Building a privacy-first tech ecosystem that restores control to individuals.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfb6b1b9b09faebbbea7b6b0b2f1bcb0b2">[email&#160;protected]</a></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-400">San Francisco, CA</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Join Our Newsletter</h4>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 QD Axiom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function toggleAccordion(element) {
+            // Toggle icon
+            const icon = element.querySelector('i');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+            icon.classList.toggle('transform');
+            icon.classList.toggle('rotate-45');
+            
+            // Toggle content
+            const content = element.nextElementSibling;
+            content.classList.toggle('open');
+            
+            // Close other accordions
+            const allAccordions = document.querySelectorAll('.accordion-item');
+            allAccordions.forEach(item => {
+                const btn = item.querySelector('button');
+                const cont = item.querySelector('.accordion-content');
+                const ic = btn.querySelector('i');
+                
+                if (btn !== element && cont.classList.contains('open')) {
+                    cont.classList.remove('open');
+                    ic.classList.add('fa-plus');
+                    ic.classList.remove('fa-minus');
+                    ic.classList.remove('transform');
+                    ic.classList.remove('rotate-45');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDgVs1rjYVzEsTOuydUSxo%2BjT4BQQ93vBuBF4eetZ4%2BrkZ%2BMniEsB0eJ5JWuhB8cbfNbpfT9A3X10jbYZPG6sfbnpl98QRr65Hax6PWr5IJR9rImRZyXVDLYbsXfxDZCi%2BGMZ2xCaw3a8AtjcMiQ5xQUgWnjzdL3jobgz4KjZ4vygxzrKTc8JrlT6auVWnQYEXeNvsrWhJKo3T1geVLZWAPbq47myGCX%2F5WPzvDtTWX4tVMa492zxj9tzD4N86zs%2FB0flOv0vESuQx6xRqcQ3OJzNlUWlzO2F5ow%2FUhInbYHl2Wm01ZK9rL%2BgTKYIA4H6bTQEiGGM%2BEusfsecGbQnYnZaQrknv5Wq6%2BMUDRJdVaDUBj1MOCN7ZfLhoq%2B9C3iz7i%2BYB7P6cnTHCDxgJWKG6kIIWyrEzEOcc9zENSR1l63wPDH4bxejKWSKrDi7WqfKf1rFwbd1Zvk1neWSUc0RRHXaTOuT91VwwLttM8z%2FyHJiXUNo%2Fej%2FQbT69ayAwRo1Cw%3D%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDgVs1rjYVzEsTOuydUSxo+jT4BQQ93vBuBF4eetZ4+rkZ+MniEsB0eJ5JWuhB8cbfNbpfT9A3X10jbYZPG6sfbnpl98QRr65Hax6PWr5IJR9rImRZyXVDLYbsXfxDZCi+GMZ2xCaw3a8AtjcMiQ5xQUgWnjzdL3jobgz4KjZ4vygxzrKTc8JrlT6auVWnQYEXeNvsrWhJKo3T1geVLZWAPbq47myGCX/5WPzvDtTWX4tVMa492zxj9tzD4N86zs/B0flOv0vESuQx6xRqcQ3OJzNlUWlzO2F5ow/UhInbYHl2Wm01ZK9rL+gTKYIA4H6bTQEiGGM+EusfsecGbQnYnZaQrknv5Wq6+MUDRJdVaDUBj1MOCN7ZfLhoq+9C3iz7i+YB7P6cnTHCDxgJWKG6kIIWyrEzEOcc9zENSR1l63wPDH4bxejKWSKrDi7WqfKf1rFwbd1Zvk1neWSUc0RRHXaTOuT91VwwLttM8z/yHJiXUNo/ej/QbT69ayAwRo1Cw==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
